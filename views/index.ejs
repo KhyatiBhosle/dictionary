@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+    <div id="landingPage">
+        <p>
+            <h1>Unlock the Power of Words</h1>
+            Stuck somewhere because you don't know the meaning of a word? Don't worry, we've got you!
+        </p>
+        <br>
+        <form action="word" method="post">
+            <span class="search">
+                <input type="text" name="word" id="word" placeholder="Start learning!">
+                <button type="submit" value="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
+            </span>
+        </form>
+    </div>
+    <%- include('partials/footer') %>

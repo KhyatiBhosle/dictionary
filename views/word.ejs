@@ -1,0 +1,70 @@
+<%- include('partials/header') %>
+<div class="meaning">
+    <div class="form">
+        <form action="word" method="post">
+            <span class="search">
+                <input type="text" name="word" id="word">
+                <button type="submit" value="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    
+            </span>
+        </form>
+    </div>
+    <br>
+    <div class="content">
+        <% if(data){%>
+            <% if(data.word){%>
+                <h1 id="enteredWord"><%= data.word %></h1>
+                <p id="phonetic"><%= data.phonetic %></p>
+                <% data.meanings.forEach(meaning => {%>
+                    <div class="partOfSpeech">
+                        <p><%= meaning.partOfSpeech %></p>
+                        <hr>
+                    </div>
+                    <span class="heading">
+                        Meaning:
+                    </span>
+                    <ul>
+                        <% meaning.definitions.forEach(definition =>{%> 
+                            <li>
+                                <%= definition.definition %>
+                            </li>
+                        <%})%>
+                    </ul>
+                    <%if(meaning.synonyms.length){%>
+                        <p>
+                            <span class="heading">
+                                Synonyms: 
+                            </span>
+                            <% meaning.synonyms.forEach((synonym) =>{%>
+                                <span class="synonym">
+                                    <%= synonym %>
+                                </span>
+                            <%})%>
+                        </p>
+                    <%}%>
+    
+                    <% if(meaning.antonyms.length){%>
+                        <p>
+                            <span class="heading">
+                                Antonyms: 
+                            </span>
+                            <% meaning.antonyms.forEach((antonym) =>{%>
+                                <span class="antonym">
+                                    <%= antonym %>
+                                </span>
+                            <%})%>
+                        </p>
+                        <br>
+                    <%}%>
+                <%})%>
+            <%}else{%>
+                <h1><%= data.title%></h1>
+                <p><%= data.message%></p>
+            <%}%>
+        <%}%>
+    </div>
+</div>
+
+<script>
+    document.querySelector("input").value = document.querySelector('h1').innerText;
+</script>
+<%- include('partials/footer') %>

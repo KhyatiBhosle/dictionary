@@ -1,0 +1,85 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #C1A57B;
+}
+
+h1{
+    font-family: serif;
+    color: #30475E;
+}
+/*-----------------------------------------------------------LANDING PAGE--------------------------------------------------------------*/
+#landingPage{
+    background-color: white;
+    min-height: 65vh;
+    text-align: center;
+    margin: 10%;
+    padding: 10% 5%;
+    color: #30475E;
+}
+
+.search{
+    padding: 5px;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #ECECEC;
+}
+
+.search input{
+    background-color: transparent;
+    width: 55vw;
+    border: none;
+    padding: 5px;
+}
+.search input::placeholder{
+    color: #30475E;
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    background-color: transparent;
+    border: none;
+}
+
+/*-----------------------------------------------------------MEANING PAGE--------------------------------------------------------------*/
+.meaning{
+    background-color: white;
+    margin: 5% 10%;
+    padding: 5% 10%;
+    border-radius: 10px;
+}
+.meaning .form{
+    text-align: center;
+}
+
+#phonetic{
+    color: #30475E;
+}
+
+.partOfSpeech p{
+    z-index: 1;
+    display: inline;
+    position: relative;
+    background-color: white;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.partOfSpeech hr{
+    position: relative;
+    bottom: 27px;
+    z-index: 0;
+}
+.heading{
+    color: #999;
+    font-size: 17px;
+}
+
+li{
+    padding: 5px;
+}
+.synonym, .antonym{ 
+    color: #30475E;
+    margin-right: 7px;
+}
+
